@@ -54,6 +54,29 @@ main.go (composition root)
 
 Each layer depends only on interfaces defined in `ports/`, making every layer independently testable.
 
+## Live API
+
+A deployed instance is available for testing:
+
+**Base URL:** `https://956hpe9ne4.execute-api.eu-west-1.amazonaws.com/prod`
+
+### List Persons
+```bash
+curl https://956hpe9ne4.execute-api.eu-west-1.amazonaws.com/prod/persons
+```
+
+### Create Person
+```bash
+curl -X POST https://956hpe9ne4.execute-api.eu-west-1.amazonaws.com/prod/persons \
+  -H "Content-Type: application/json" \
+  -d '{
+    "firstName": "Doruk",
+    "lastName": "Demirci",
+    "phoneNumber": "01233445",
+    "address": "Amsterdam Nederland"
+  }'
+```
+
 ## API
 
 ### POST /persons

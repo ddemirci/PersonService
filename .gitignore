@@ -6,3 +6,10 @@ node_modules
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+
+# Go build artifacts
+service/bootstrap
+stream-service/bootstrap
+
+# macOS
+.DS_Store
